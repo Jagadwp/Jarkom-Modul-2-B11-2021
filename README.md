@@ -229,7 +229,7 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
 
 
 ## Soal 6
-Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.franky.yyy.com` yang didelegasikan dari EniesLobby ke Water7 dengan IP menuju ke Skypie dalam folder sunnygo.
+Setelah itu terdapat subdomain `mencha.franky.yyy.com` dengan alias `www.mencha.franky.yyy.com` yang didelegasikan dari EniesLobby ke Water7 dengan IP menuju ke Skypie dalam folder sunnygo.
 
 ### Jawaban
 _*Pada project GNS3 kami terdapat typo. Kata `mecha` terlanjur kami tulis dengan `mencha`di semua konfigurasi._ <br><br>
@@ -266,12 +266,12 @@ _*Pada project GNS3 kami terdapat typo. Kata `mecha` terlanjur kami tulis dengan
   ```
   mkdir /etc/bind/sunnygo
   ```
-- Copykan file `db.local` pada path `/etc/bind` ke dalam folder `sunnygo` yang baru saja dibuat dan ubah namanya menjadi `mecha.franky.B11.com`.
+- Copykan file `db.local` pada path `/etc/bind` ke dalam folder `sunnygo` yang baru saja dibuat dan ubah namanya menjadi `mencha.franky.B11.com`.
 
   ```
-  cp /etc/bind/db.local /etc/bind/sunnygo/mecha.franky.B11.com
+  cp /etc/bind/db.local /etc/bind/sunnygo/mencha.franky.B11.com
   ```
-- Edit file `/etc/bind/sunnygo/mecha.franky.B11.com` seperti pada gambar berikut:
+- Edit file `/etc/bind/sunnygo/mencha.franky.B11.com` seperti pada gambar berikut:
 
   ![06-06](https://user-images.githubusercontent.com/67728406/139535569-4ec9bcd5-3897-4eec-adde-c851f7e7e694.png)
 
@@ -282,17 +282,17 @@ _*Pada project GNS3 kami terdapat typo. Kata `mecha` terlanjur kami tulis dengan
   ```
 
 **Pada Loguetown**
-- Lakukan ping domain `mecha.franky.B11.com` dan `www.mecha.franky.B11.com`.
+- Lakukan ping domain `mencha.franky.B11.com` dan `www.mencha.franky.B11.com`.
 
   ![06-07](https://user-images.githubusercontent.com/67728406/139535608-04668993-6aa6-4191-928e-ac97fc74ea0a.png)
 
 
 ## Soal 7
-Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Water7 dengan nama `general.mecha.franky.yyy.com` dengan alias `www.general.mecha.franky.yyy.com` yang mengarah ke Skypie.
+Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Water7 dengan nama `general.mencha.franky.yyy.com` dengan alias `www.general.mencha.franky.yyy.com` yang mengarah ke Skypie.
 
 ### Jawaban
 **Pada Water7**
-- Edit file `/etc/bind/sunnygo/mecha.franky.B11.com` seperti pada gambar berikut:
+- Edit file `/etc/bind/sunnygo/mencha.franky.B11.com` seperti pada gambar berikut:
 
   ![07-01](https://user-images.githubusercontent.com/67728406/139535677-dc48eb6e-c6d8-457e-9853-f23ba6acd72f.png)
 
@@ -303,7 +303,7 @@ Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Wa
   ```
 
 **Pada Loguetown**
-- Lakukan ping domain `general.mecha.franky.B11.com`.
+- Lakukan ping domain `general.mencha.franky.B11.com`.
 
   ![07-02](https://user-images.githubusercontent.com/67728406/139535716-cf452584-c97d-44e3-9d2c-a3daaf4911ba.png)
 
@@ -496,13 +496,13 @@ Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host i
 
 
 ## Soal 14
-Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakses dengan port 15000 dan port 15500.
+Dan Luffy meminta untuk web `www.general.mencha.franky.yyy.com` hanya bisa diakses dengan port 15000 dan port 15500.
 
 ### Jawaban
 **Pada Skypie**
 - Pindah ke directory `/etc/apache2/sites-available`.
-- Copy file `000-default.conf` menjadi file `general.mecha.franky.B11.com.conf`.
-- Edit file `general.mecha.franky.B11.com.conf` seperti pada gambar berikut:
+- Copy file `000-default.conf` menjadi file `general.mencha.franky.B11.com.conf`.
+- Edit file `general.mencha.franky.B11.com.conf` seperti pada gambar berikut:
 
   ![14-01](https://user-images.githubusercontent.com/67728406/139527233-8db0ea26-1f30-4a1f-92bd-9ff57b48a197.png)
 
@@ -510,10 +510,10 @@ Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakse
 
   ![14-02](https://user-images.githubusercontent.com/67728406/139527252-3681f195-8ddd-4834-95fa-b28e66c1d8f8.png)
 
-- Aktifkan konfigurasi general.mecha.franky.B11.com.
+- Aktifkan konfigurasi general.mencha.franky.B11.com.
 
   ```
-  a2ensite general.mecha.franky.B11.com
+  a2ensite general.mencha.franky.B11.com
   ```
 - Restart apache.
 
@@ -524,37 +524,37 @@ Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakse
 - Download file zip menggunakan `wget`.
 
   ```
-  wget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/general.mecha.franky.zip
+  wget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/general.mencha.franky.zip
   ```
 - Lakukan unzip.
 
   ```
-  unzip general.mecha.franky.zip
+  unzip general.mencha.franky.zip
   ```
-- Rename folder `general.mecha.franky` menjadi `general.mecha.franky.B11.com` dan terdapat isi file seperti pada gambar berikut:
+- Rename folder `general.mencha.franky` menjadi `general.mencha.franky.B11.com` dan terdapat isi file seperti pada gambar berikut:
 
   ![14-03](https://user-images.githubusercontent.com/67728406/139527268-f280c25c-b144-4a84-94b8-7966854909da.png)
 
 
 **Pada Loguetown**
-- Buka `general.mecha.franky.B11.com` menggunakan lynx.
+- Buka `general.mencha.franky.B11.com` menggunakan lynx.
 
   ![14-04](https://user-images.githubusercontent.com/31863229/138662635-4721d99a-0698-46f6-ad73-29b1dcc08a3e.PNG)
-- Buka `general.mecha.franky.B11.com:15000` menggunakan lynx.
+- Buka `general.mencha.franky.B11.com:15000` menggunakan lynx.
 
   ![14-05](https://user-images.githubusercontent.com/67728406/139527305-b9305f2e-81ac-4bc0-b123-19d85192f3f0.png)
 
-- Buka `general.mecha.franky.B11.com:15500` menggunakan lynx.
+- Buka `general.mencha.franky.B11.com:15500` menggunakan lynx.
 
   ![14-06](https://user-images.githubusercontent.com/67728406/139527305-b9305f2e-81ac-4bc0-b123-19d85192f3f0.png)
 
 ## Soal 15
-Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/www/general.mecha.franky.yyy`.
+Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/www/general.mencha.franky.yyy`.
 
 ### Jawaban
 **Pada Skypie**
 - Pindah ke directory `/etc/apache2/sites-available`.
-- Edit file  `.htaccess` pada `general.mecha.franky.B11.com.conf` seperti pada gambar berikut:
+- Edit file  `.htaccess` pada `general.mencha.franky.B11.com.conf` seperti pada gambar berikut:
 
   ![15-01](https://user-images.githubusercontent.com/67728406/139527428-a0904f02-32f7-44a1-a154-fb439e2c0c30.png)
 
@@ -570,7 +570,7 @@ Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/w
   ```
 
 **Pada Loguetown**
-- Buka `general.mecha.franky.B11.com:15000` menggunakan lynx dengan username `luffy` dan password `onepiece`.
+- Buka `general.mencha.franky.B11.com:15000` menggunakan lynx dengan username `luffy` dan password `onepiece`.
 
   ![15-02](https://user-images.githubusercontent.com/67728406/139527470-cdf49725-f1ea-44c7-8f23-4a59f1230073.png)
 
@@ -633,7 +633,7 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
 ## Kendala
 1. Lupa memasukkan script instalasi dan konfigurasi ke `script.sh`.
 2. Kesulitan dalam mengganti request gambar yang memiliki substring franky untuk diarahkan menuju franky.png pada soal no. 17.
-3. Typo pada Mencha, harusnya Mecha
+3. Typo pada `mencha`, harusnya `mecha`. Kami terlanjur menggunakan `mencha` di semua konfigurasi.
 
 ## Pembagian Tugas
 |Nama                   |Soal   |
