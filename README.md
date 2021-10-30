@@ -614,6 +614,6 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
 ## Pembagian Tugas
 |Nama                   |Soal   |
 |:---------------------:|:-----:|
-|nama|soal|
-|nama|soal|
+|Muhammad Nevin|1-3|
+|Albert Filip Silalahi|4-6|
 |Jagad Wijaya Purnomo|7-17|
