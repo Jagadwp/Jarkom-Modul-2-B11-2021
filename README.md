@@ -99,7 +99,8 @@ Luffy ingin menghubungi Franky yang berada di `EniesLobby` dengan denden mushi. 
   ```
 - Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
 
-  ![02-01](https://user-images.githubusercontent.com/31863229/138604972-862e5f21-579f-497b-88d8-a89c397ccc23.PNG)
+  ![02-01](https://user-images.githubusercontent.com/67728406/139534483-4377b448-1587-4d6b-92c4-1c015287e6e8.png)
+
 - Buat folder `kaizoku` di dalam `/etc/bind`.
 
   ```
@@ -112,7 +113,9 @@ Luffy ingin menghubungi Franky yang berada di `EniesLobby` dengan denden mushi. 
   ```
 - Edit file `/etc/bind/kaizoku/franky.B11.com` seperti pada gambar berikut:
 
-  ![02-02](https://user-images.githubusercontent.com/31863229/138604974-f22d570b-8983-4057-b538-99a0b1eae771.PNG)
+  ![02-02](https://user-images.githubusercontent.com/67728406/139534680-08250ef0-18ce-4cfd-86ee-0b389c0e2154.png)
+
+
 - Restart bind9.
 
   ```
@@ -122,10 +125,12 @@ Luffy ingin menghubungi Franky yang berada di `EniesLobby` dengan denden mushi. 
 **Pada Loguetown**
 - Edit file `/etc/resolv.conf` seperti pada gambar berikut:
 
-  ![02-03](https://user-images.githubusercontent.com/31863229/138604976-c91c2357-e94c-4f4c-bd8e-9688a03cbd93.PNG)
+  ![02-03](https://user-images.githubusercontent.com/67728406/139534564-6ff9f253-99fa-4d98-822f-20b7e346b142.png)
+
 - Lakukan ping domain `franky.B11.com` dan `www.franky.B11.com`.
 
-  ![02-04](https://user-images.githubusercontent.com/31863229/138604968-bf89f8dc-6855-4aec-a54f-d51bd2aa9aa8.PNG)
+  ![02-04](https://user-images.githubusercontent.com/67728406/139534610-27f87150-37a8-4be2-9b17-614d36c761d9.png)
+
 
 ## Soal 3
 Setelah itu buat subdomain `super.franky.yyy.com` dengan alias `www.super.franky.yyy.com` yang diatur DNS nya di EniesLobby dan mengarah ke Skypie.
@@ -134,7 +139,8 @@ Setelah itu buat subdomain `super.franky.yyy.com` dengan alias `www.super.franky
 **Pada EniesLobby**
 - Edit file `/etc/bind/kaizoku/franky.B11.com` seperti pada gambar berikut:
 
-  ![03-01](https://user-images.githubusercontent.com/31863229/138607683-fc9a0ab3-0f2d-495a-95a4-190a4406d690.PNG)
+  ![03-01](https://user-images.githubusercontent.com/67728406/139534723-9637281e-d0c0-481b-984d-992e143dc9e6.png)
+
 - Restart bind9.
 
   ```
@@ -144,7 +150,8 @@ Setelah itu buat subdomain `super.franky.yyy.com` dengan alias `www.super.franky
 **Pada Loguetown**
 - Lakukan ping domain `super.franky.B11.com`.
 
-  ![03-02](https://user-images.githubusercontent.com/31863229/138607616-7a3e2c4f-a9fa-46e1-8869-b06c06439484.PNG)
+  ![03-02](https://user-images.githubusercontent.com/67728406/139534752-739b82cc-1274-45d8-9e3e-1aee0af0d2c4.png)
+
 
 ## Soal 4
 Buat juga reverse domain untuk domain utama.
@@ -153,7 +160,8 @@ Buat juga reverse domain untuk domain utama.
 **Pada EniesLobby**
 - Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
 
-  ![04-01](https://user-images.githubusercontent.com/31863229/138608215-9c81c5c6-841d-4ee6-ac97-c9aeac83c857.PNG)
+  ![04-01](https://user-images.githubusercontent.com/67728406/139534802-e60fb59f-b46d-4997-b6f4-f88f686ec4a9.png)
+
 - Copykan file `db.local` pada path `/etc/bind` ke dalam folder `kaizoku` yang baru saja dibuat dan ubah namanya menjadi `2.182.192.in-addr.arpa`.
 
   ```
@@ -161,7 +169,8 @@ Buat juga reverse domain untuk domain utama.
   ```
 - Edit file `/etc/bind/kaizoku/2.182.192.in-addr.arpa` seperti pada gambar berikut:
 
-  ![04-02](https://user-images.githubusercontent.com/31863229/138608218-aad67a21-2e26-4515-8d30-0dbcc785486b.PNG)
+  ![04-02](https://user-images.githubusercontent.com/67728406/139534911-b7a491e9-4cb2-4676-a0bb-b3ca38681c3e.png)
+
 - Restart bind9.
 
   ```
@@ -171,7 +180,8 @@ Buat juga reverse domain untuk domain utama.
 **Pada Loguetown**
 - Lakukan pengecekan konfigurasi dengan perintah `host -t PTR 192.182.2.2`.
 
-  ![04-03](https://user-images.githubusercontent.com/31863229/138608220-e9af715c-628e-45c3-b9df-8dd90118ab26.PNG)
+  ![04-03](https://user-images.githubusercontent.com/67728406/139534951-673af4f6-22b9-468f-a707-cb103caab01f.png)
+
 
 ## Soal 5
 Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Water7 sebagai DNS Slave untuk domain utama.
@@ -180,7 +190,8 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
 **Pada EniesLobby**
 - Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
 
-  ![05-01](https://user-images.githubusercontent.com/31863229/138608897-e941962a-ae1c-4ad9-9bf9-661c8a66e0e0.PNG)
+  ![05-01](https://user-images.githubusercontent.com/67728406/139534993-e881c230-076c-489a-8a91-6352a608497b.png)
+
 - Restart bind9.
 
   ```
@@ -195,7 +206,8 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
   ```
 - Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
 
-  ![05-02](https://user-images.githubusercontent.com/31863229/138608898-a4c81747-c995-48aa-85c9-8568fc688b21.PNG)
+  ![05-02](https://user-images.githubusercontent.com/67728406/139535036-a8b52151-492e-47e4-8890-ebc9964b83e5.png)
+
 - Restart bind9.
 
   ```
@@ -209,25 +221,31 @@ Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Wat
   ```
 - Edit file `/etc/resolv.conf` seperti pada gambar berikut:
 
-  ![05-03](https://user-images.githubusercontent.com/31863229/138608902-ba9806a8-549e-48c7-993d-ae9310eee1ab.PNG)
+  ![05-03](https://user-images.githubusercontent.com/67728406/139535080-ebf4eeb2-9844-4f0f-8046-a31248e911d4.png)
+
 - Lakukan ping domain `franky.B11.com`.
 
-  ![05-04](https://user-images.githubusercontent.com/31863229/138608904-4f897143-9edb-4dbe-a7cf-bd6ff15136f3.PNG)
+  ![05-04](https://user-images.githubusercontent.com/67728406/139535108-f201381b-c44d-4919-a79e-0081387717fb.png)
+
 
 ## Soal 6
 Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.franky.yyy.com` yang didelegasikan dari EniesLobby ke Water7 dengan IP menuju ke Skypie dalam folder sunnygo.
 
 ### Jawaban
+_*Pada project GNS3 kami terdapat typo. Kata `mecha` terlanjur kami tulis dengan `mencha`di semua konfigurasi._ <br><br>
 **Pada EniesLobby**
 - Edit file `/etc/bind/kaizoku/franky.B11.com` seperti pada gambar berikut:
 
-  ![06-01](https://user-images.githubusercontent.com/31863229/138610108-06d654ab-72af-4542-84ca-d11191b4addf.PNG)
+  ![06-01](https://user-images.githubusercontent.com/67728406/139535363-4039d4ae-1d59-40b0-bc3f-939451211a15.png)
+
 - Edit file `/etc/bind/named.conf.options` seperti pada gambar berikut:
 
-  ![06-02](https://user-images.githubusercontent.com/31863229/138610112-b124ab94-3095-434c-ae01-60a57421e6a6.PNG)
+  ![06-02](https://user-images.githubusercontent.com/67728406/139535430-523fe301-1e7e-4c66-9eb5-1f599a5cb40d.png)
+
 - Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
 
-  ![06-03](https://user-images.githubusercontent.com/31863229/138610113-ca288dab-be46-4c48-a19c-a17fcde19478.PNG)
+  ![06-03](https://user-images.githubusercontent.com/67728406/139535454-1030f213-3332-41bd-b32e-bbc9b7890878.png)
+
 - Restart bind9.
 
   ```
@@ -237,10 +255,12 @@ Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.fr
 **Pada Water7**
 - Edit file `/etc/bind/named.conf.options` seperti pada gambar berikut:
 
-  ![06-04](https://user-images.githubusercontent.com/31863229/138610114-8ee223f2-c04b-4b03-b809-4093ad35d3a3.PNG)
+  ![06-04](https://user-images.githubusercontent.com/67728406/139535497-bc800d00-cc31-4f70-86cc-9717aaa91157.png)
+
 - Edit file `/etc/bind/named.conf.local` seperti pada gambar berikut:
 
-  ![06-05](https://user-images.githubusercontent.com/31863229/138610115-7fff082c-e675-4b64-bcfd-8ec4d1e16379.PNG)
+  ![06-05](https://user-images.githubusercontent.com/67728406/139535539-0c3e3cc3-6fcb-4c6e-bb3e-cf3afda3597e.png)
+
 - Buat folder `sunnygo` di dalam `/etc/bind`.
 
   ```
@@ -253,7 +273,8 @@ Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.fr
   ```
 - Edit file `/etc/bind/sunnygo/mecha.franky.B11.com` seperti pada gambar berikut:
 
-  ![06-06](https://user-images.githubusercontent.com/31863229/138610118-db206c8e-fa3e-48a9-b985-c00fb991f75f.PNG)
+  ![06-06](https://user-images.githubusercontent.com/67728406/139535569-4ec9bcd5-3897-4eec-adde-c851f7e7e694.png)
+
 - Restart bind9.
 
   ```
@@ -263,7 +284,8 @@ Setelah itu terdapat subdomain `mecha.franky.yyy.com` dengan alias `www.mecha.fr
 **Pada Loguetown**
 - Lakukan ping domain `mecha.franky.B11.com` dan `www.mecha.franky.B11.com`.
 
-  ![06-07](https://user-images.githubusercontent.com/31863229/138610119-68f7a6ec-87a2-49ca-b6bc-615d3380a52d.PNG)
+  ![06-07](https://user-images.githubusercontent.com/67728406/139535608-04668993-6aa6-4191-928e-ac97fc74ea0a.png)
+
 
 ## Soal 7
 Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Water7 dengan nama `general.mecha.franky.yyy.com` dengan alias `www.general.mecha.franky.yyy.com` yang mengarah ke Skypie.
@@ -272,7 +294,8 @@ Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Wa
 **Pada Water7**
 - Edit file `/etc/bind/sunnygo/mecha.franky.B11.com` seperti pada gambar berikut:
 
-  ![07-01](https://user-images.githubusercontent.com/31863229/138610375-671877c7-1fac-48be-ae53-e183062fde0b.PNG)
+  ![07-01](https://user-images.githubusercontent.com/67728406/139535677-dc48eb6e-c6d8-457e-9853-f23ba6acd72f.png)
+
 - Restart bind9.
 
   ```
@@ -282,7 +305,8 @@ Untuk memperlancar komunikasi Luffy dan rekannya, dibuatkan subdomain melalui Wa
 **Pada Loguetown**
 - Lakukan ping domain `general.mecha.franky.B11.com`.
 
-  ![07-02](https://user-images.githubusercontent.com/31863229/138610376-36e4f097-cddd-4a9a-a5ad-222803544258.PNG)
+  ![07-02](https://user-images.githubusercontent.com/67728406/139535716-cf452584-c97d-44e3-9d2c-a3daaf4911ba.png)
+
 
 ## Soal 8
 Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pertama dengan webserver `www.franky.yyy.com`. Pertama, luffy membutuhkan webserver dengan DocumentRoot pada `/var/www/franky.yyy.com`.
