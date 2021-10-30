@@ -300,7 +300,8 @@ Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pert
 - Copy file `000-default.conf` menjadi file `franky.B11.com.conf`.
 - Edit file `franky.B11.com.conf` seperti pada gambar berikut:
 
-  ![08-01](https://user-images.githubusercontent.com/31863229/138613006-f2481e4f-c1c5-4fd9-96c2-3fbc4b3ec9f1.PNG)
+  ![08-01](https://user-images.githubusercontent.com/67728406/139526675-99c58eb4-997c-45fe-8039-235fdb198fe4.png)
+
 - Aktifkan konfigurasi franky.B11.com.
 
   ```
@@ -324,7 +325,8 @@ Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pert
   ```
 - Rename folder `franky` menjadi `franky.B11.com` dan terdapat isi file seperti pada gambar berikut:
 
-  ![08-02](https://user-images.githubusercontent.com/31863229/138613003-0bf147e7-68cd-460d-a82d-1d12cdd02581.PNG)
+  ![08-02](https://user-images.githubusercontent.com/67728406/139528021-466fe91b-8b38-4451-8f70-5e2311d2896f.png)
+
 
 **Pada Loguetown**
 - Install aplikasi lynx.
@@ -344,7 +346,7 @@ Setelah itu, Luffy juga membutuhkan agar url `www.franky.yyy.com/index.php/home`
 - Pindah ke directory `/etc/apache2/sites-available`.
 - Edit file `franky.B11.com.conf` seperti pada gambar berikut:
 
-  ![09-01](https://user-images.githubusercontent.com/31863229/138647864-b9012e2d-8002-41cf-965d-b6b19d113b4a.PNG)
+  ![09-01](https://user-images.githubusercontent.com/67728406/139526675-99c58eb4-997c-45fe-8039-235fdb198fe4.png)
 - Restart apache.
 
   ```
@@ -365,7 +367,8 @@ Setelah itu, pada subdomain `www.super.franky.yyy.com`, Luffy membutuhkan penyim
 - Copy file `000-default.conf` menjadi file `super.franky.B11.com.conf`.
 - Edit file `super.franky.B11.com.conf` seperti pada gambar berikut:
 
-  ![10-01](https://user-images.githubusercontent.com/31863229/138649466-0ade542c-3d0f-4779-9be7-3d011a519d03.PNG)
+  ![10-01](https://user-images.githubusercontent.com/67728406/139526834-d91e0894-c9fc-42e6-8d4d-f82d73123461.png)
+
 - Aktifkan konfigurasi super.franky.B11.com.
 
   ```
@@ -389,12 +392,14 @@ Setelah itu, pada subdomain `www.super.franky.yyy.com`, Luffy membutuhkan penyim
   ```
 - Rename folder `super.franky` menjadi `super.franky.B11.com` dan terdapat isi file seperti pada gambar berikut:
 
-  ![10-02](https://user-images.githubusercontent.com/31863229/138649479-746c84b9-960b-4d48-808e-cf1724964842.PNG)
+  ![10-02](https://user-images.githubusercontent.com/67728406/139526873-3c5190f7-2fb9-45a2-89f0-b7c7d37b903e.png)
+
 
 **Pada Loguetown**
 - Buka `super.franky.B11.com` menggunakan lynx.
 
-  ![10-03](https://user-images.githubusercontent.com/31863229/138649483-5120d387-c212-4fdf-B11c-9ad5f7fac4b3.PNG)
+  ![10-03](https://user-images.githubusercontent.com/67728406/139526923-2e91e88f-6965-4ced-a9aa-9cfae21c201b.png)
+
 
 ## Soal 11
 Akan tetapi, pada folder `/public`, Luffy ingin hanya dapat melakukan directory listing saja.
@@ -404,7 +409,8 @@ Akan tetapi, pada folder `/public`, Luffy ingin hanya dapat melakukan directory 
 - Pindah ke directory `/etc/apache2/sites-available`.
 - Edit file `super.franky.B11.com.conf` seperti pada gambar berikut:
 
-  ![11-01](https://user-images.githubusercontent.com/31863229/138650989-ce3f44f6-20af-40d7-bf1e-c90483ee7029.PNG)
+  ![11-01](https://user-images.githubusercontent.com/67728406/139526998-5d22d029-8499-45f4-b3ee-d7946acbf902.png)
+
 - Restart apache.
 
   ```
@@ -414,10 +420,12 @@ Akan tetapi, pada folder `/public`, Luffy ingin hanya dapat melakukan directory 
 **Pada Loguetown**
 - Buka `super.franky.B11.com/public` menggunakan lynx.
 
-  ![11-02](https://user-images.githubusercontent.com/31863229/138694312-8e9505f9-e4b9-43b2-9525-896a9b6cbe68.PNG)
+  ![11-02](https://user-images.githubusercontent.com/67728406/139527033-dec49dbc-8000-4af3-9e15-a633cebfb979.png)
+
 - Buka `super.franky.B11.com/public/css`, `super.franky.B11.com/public/images`, dan `super.franky.B11.com/public/js` menggunakan lynx.
 
-  ![11-03](https://user-images.githubusercontent.com/31863229/138651176-a247c424-a618-48aa-8c03-3461a808d9e3.PNG)
+  ![11-03](https://user-images.githubusercontent.com/67728406/139527052-03614f03-709d-427c-ab26-473458a99e6f.png)
+
 
 ## Soal 12
 Tidak hanya itu, Luffy juga menyiapkan error file `404.html` pada folder `/error` untuk mengganti error kode pada apache.
@@ -427,7 +435,8 @@ Tidak hanya itu, Luffy juga menyiapkan error file `404.html` pada folder `/error
 - Pindah ke directory `/etc/apache2/sites-available`.
 - Edit file `super.franky.B11.com.conf` seperti pada gambar berikut:
 
-  ![12-01](https://user-images.githubusercontent.com/31863229/138652177-bcaeb9ad-090e-4ae2-ac0f-06fe93ebcf1e.PNG)
+  ![12-01](https://user-images.githubusercontent.com/67728406/139527103-93ef32fa-cd5e-4cd2-944c-de4c1ab7aefc.png)
+
 - Restart apache.
 
   ```
@@ -447,7 +456,8 @@ Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host i
 - Pindah ke directory `/etc/apache2/sites-available`.
 - Edit file `super.franky.B11.com.conf` seperti pada gambar berikut:
 
-  ![13-01](https://user-images.githubusercontent.com/31863229/138653250-28b03028-f476-4f28-b91e-e7da9691a080.PNG)
+  ![13-01](https://user-images.githubusercontent.com/67728406/139527133-c00f05d7-5c68-40af-b8c0-80df288d2ce7.png)
+
 - Restart apache.
 
   ```
@@ -457,7 +467,9 @@ Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host i
 **Pada Loguetown**
 - Buka `super.franky.B11.com/js` menggunakan lynx.
 
-  ![13-02](https://user-images.githubusercontent.com/31863229/138653260-2543aacb-8623-4fc4-8790-71ca479d3061.PNG)
+  ![13-02](https://user-images.githubusercontent.com/67728406/139527203-a053431a-b0d2-482f-86d8-839de9acab8e.png)
+
+
 
 ## Soal 14
 Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakses dengan port 15000 dan port 15500.
@@ -468,11 +480,12 @@ Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakse
 - Copy file `000-default.conf` menjadi file `general.mecha.franky.B11.com.conf`.
 - Edit file `general.mecha.franky.B11.com.conf` seperti pada gambar berikut:
 
-  ![14-01](https://user-images.githubusercontent.com/31863229/138662605-7d4a055c-4755-4b79-8e7d-0c71bc13f151.PNG)
-  ![14-02](https://user-images.githubusercontent.com/31863229/138662623-e0b7649c-e02d-4774-88b7-a91ab14387be.PNG)
+  ![14-01](https://user-images.githubusercontent.com/67728406/139527233-8db0ea26-1f30-4a1f-92bd-9ff57b48a197.png)
+
 - Edit file `/etc/apache2/ports.conf` untuk mengaktifkan port 15000 dan port 15500 seperti pada gambar berikut:
 
-  ![14-03](https://user-images.githubusercontent.com/31863229/138662627-16ddbfb7-56c2-4f8d-9dce-2092d8cccbd3.PNG)
+  ![14-02](https://user-images.githubusercontent.com/67728406/139527252-3681f195-8ddd-4834-95fa-b28e66c1d8f8.png)
+
 - Aktifkan konfigurasi general.mecha.franky.B11.com.
 
   ```
@@ -496,18 +509,20 @@ Dan Luffy meminta untuk web `www.general.mecha.franky.yyy.com` hanya bisa diakse
   ```
 - Rename folder `general.mecha.franky` menjadi `general.mecha.franky.B11.com` dan terdapat isi file seperti pada gambar berikut:
 
-  ![14-04](https://user-images.githubusercontent.com/31863229/138662631-42197d6c-557d-44e8-a569-be9a59c4abd8.PNG)
+  ![14-03](https://user-images.githubusercontent.com/67728406/139527268-f280c25c-b144-4a84-94b8-7966854909da.png)
+
 
 **Pada Loguetown**
 - Buka `general.mecha.franky.B11.com` menggunakan lynx.
 
-  ![14-05](https://user-images.githubusercontent.com/31863229/138662635-4721d99a-0698-46f6-ad73-29b1dcc08a3e.PNG)
+  ![14-04](https://user-images.githubusercontent.com/31863229/138662635-4721d99a-0698-46f6-ad73-29b1dcc08a3e.PNG)
 - Buka `general.mecha.franky.B11.com:15000` menggunakan lynx.
 
-  ![14-06](https://user-images.githubusercontent.com/31863229/138662644-484252fc-8cc6-42c4-9977-8f52d1700ae4.PNG)
+  ![14-05](https://user-images.githubusercontent.com/67728406/139527305-b9305f2e-81ac-4bc0-b123-19d85192f3f0.png)
+
 - Buka `general.mecha.franky.B11.com:15500` menggunakan lynx.
 
-  ![14-07](https://user-images.githubusercontent.com/31863229/138662647-d8726d77-37e9-4059-b57b-5907dccd2f92.PNG)
+  ![14-06](https://user-images.githubusercontent.com/67728406/139527305-b9305f2e-81ac-4bc0-b123-19d85192f3f0.png)
 
 ## Soal 15
 Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/www/general.mecha.franky.yyy`.
@@ -515,10 +530,10 @@ Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/w
 ### Jawaban
 **Pada Skypie**
 - Pindah ke directory `/etc/apache2/sites-available`.
-- Edit file `general.mecha.franky.B11.com.conf` seperti pada gambar berikut:
+- Edit file  `.htaccess` pada `general.mecha.franky.B11.com.conf` seperti pada gambar berikut:
 
-  ![15-01](https://user-images.githubusercontent.com/31863229/138665511-c995a6bb-88c3-4d15-99de-91cc18c79e8b.PNG)
-  ![15-02](https://user-images.githubusercontent.com/31863229/138665524-77d3d34d-ca27-43af-913a-4646f5cd5020.PNG)
+  ![15-01](https://user-images.githubusercontent.com/67728406/139527428-a0904f02-32f7-44a1-a154-fb439e2c0c30.png)
+
 - Jalankan perintah berikut untuk membuat akun autentikasi baru dengan username `luffy`. Kita akan diminta untuk memasukkan password baru dan confirm password tersebut diisi `onepiece`.
 
   ```
@@ -531,11 +546,10 @@ Dengan authentikasi username `luffy` dan password `onepiece` dan file di `/var/w
   ```
 
 **Pada Loguetown**
-- Buka `general.mecha.franky.B11.com:15000` menggunakan lynx.
+- Buka `general.mecha.franky.B11.com:15000` menggunakan lynx dengan username `luffy` dan password `onepiece`.
 
-  ![15-03](https://user-images.githubusercontent.com/31863229/138665528-85ea4f7c-2b62-4f83-9e70-bfc165c2df44.PNG)
-  ![15-04](https://user-images.githubusercontent.com/31863229/138665530-6ae720ac-15c8-472c-9f10-d55f3cb3f080.PNG)
-  ![15-05](https://user-images.githubusercontent.com/31863229/138665534-db4cce14-77ae-4d97-b297-14c06a19dbc7.PNG)
+  ![15-02](https://user-images.githubusercontent.com/67728406/139527470-cdf49725-f1ea-44c7-8f23-4a59f1230073.png)
+
 
 ## Soal 16
 Dan setiap kali mengakses IP Skypie akan diahlikan secara otomatis ke `www.franky.yyy.com`.
@@ -545,7 +559,8 @@ Dan setiap kali mengakses IP Skypie akan diahlikan secara otomatis ke `www.frank
 - Pindah ke directory `/etc/apache2/sites-available`.
 - Edit file `000-default.conf` seperti pada gambar berikut:
 
-  ![16-01](https://user-images.githubusercontent.com/31863229/138668608-5cbdd2ce-6804-4239-adec-4579bed6db13.PNG)
+  ![16-01](https://user-images.githubusercontent.com/67728406/139527719-3ad9e40b-234c-460f-af28-8ecdcc3d5679.png)
+
 - Restart apache.
 
   ```
@@ -566,11 +581,11 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
 - Restart apache dengan perintah `service apache2 restart`.
 - Tambahkan file baru `.htaccess` pada folder `/var/www/super.franky.B11.com`, di mana file tersebut akan dimodifikasi menjadi:
 
-  ![17-01](https://user-images.githubusercontent.com/31863229/138675514-f6ac8976-a897-483c-91ec-694c0ab376f1.PNG)
+  ![17-01](https://user-images.githubusercontent.com/67728406/139527739-a4ccd390-46b5-482a-b05a-0bdd31c34af9.png)
 - Pindah ke directory `/etc/apache2/sites-available`.
 - Edit file `super.franky.B11.com.conf` agar file `.htaccess` dapat berjalan seperti pada gambar berikut:
 
-  ![17-02](https://user-images.githubusercontent.com/31863229/138675524-9fab5fb6-3991-4654-8beb-5ae8ac2d4623.PNG)
+  ![17-02](https://user-images.githubusercontent.com/67728406/139527768-83738789-0136-4d20-ab3a-f36de023d0f4.png)
 - Restart apache.
 
   ```
@@ -580,21 +595,24 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
 **Pada Loguetown**
 - Buka `super.franky.B11.com/public/images/franky.png` menggunakan lynx.
 
-  ![17-03](https://user-images.githubusercontent.com/31863229/138675528-40995ec7-560a-4d9e-b2b9-b05ee3b3f64d.PNG)
+  ![17-03](https://user-images.githubusercontent.com/67728406/139527791-c5a6efde-f91b-4b94-8fcd-f284b8bb93c3.png)
+
 - Buka `super.franky.B11.com/public/images/eyeoffranky.jpg` menggunakan lynx.
 
-  ![17-04](https://user-images.githubusercontent.com/31863229/138675531-b28c94e8-656f-46d4-a759-28ba179577a5.PNG)
+  ![17-04](https://user-images.githubusercontent.com/67728406/139527807-309c7620-0974-482d-aa21-0b98a49150de.png)
+
 - Buka `super.franky.B11.com/public/images/background-frank.jpg` menggunakan lynx.
 
-  ![17-05](https://user-images.githubusercontent.com/31863229/138675533-1e50bd51-09ed-4d6c-9ec8-d15651521052.PNG)
+  ![17-05](https://user-images.githubusercontent.com/67728406/139527835-b1c9c383-f642-4252-aece-6b36f429b3c5.png)
+
 
 ## Kendala
-1. Kesulitan untuk memberikan alias pada subdomain pada soal 3 dan 7.
-2. Sedikit kesulitan pada pengerjaan soal Web Server karena aplikasi lynx tidak dapat menampilkan gambar pada soal 17.
+1. Lupa memasukkan script instalasi dan konfigurasi ke `script.sh`.
+2. Kesulitan dalam mengganti request gambar yang memiliki substring franky akan diarahkan menuju franky.png pada pengerjaan soal 17.
 
 ## Pembagian Tugas
 |Nama                   |Soal   |
 |:---------------------:|:-----:|
 |nama|soal|
 |nama|soal|
-|nama|soal|
+|Jagad Wijaya Purnomo|soal no. 7-17|
