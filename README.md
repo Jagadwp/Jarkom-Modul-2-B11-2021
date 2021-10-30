@@ -609,6 +609,7 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
 ## Kendala
 1. Lupa memasukkan script instalasi dan konfigurasi ke `script.sh`.
 2. Kesulitan dalam mengganti request gambar yang memiliki substring franky untuk diarahkan menuju franky.png pada soal no. 17.
+3. Typo pada Mencha, harusnya Mecha
 
 ## Pembagian Tugas
 |Nama                   |Soal   |
