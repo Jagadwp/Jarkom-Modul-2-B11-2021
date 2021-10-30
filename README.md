@@ -4,7 +4,7 @@
 - Muhammad Nevin        (05111940000079)
 - Albert Filip Silalahi (05111940000116)
 - Jagad Wijaya Purnomo	(05111940000132)
-Repositori Praktikum Jarkom Modul 2
+
 
 ## Soal 1
 EniesLobby akan dijadikan sebagai DNS Master, Water7 akan dijadikan DNS Slave, dan Skypie akan digunakan sebagai Web Server. Terdapat 2 Client yaitu Loguetown, dan Alabasta. Semua node terhubung pada router Foosha, sehingga dapat mengakses internet.
@@ -608,11 +608,11 @@ Dikarenakan Franky juga ingin mengajak temannya untuk dapat menghubunginya melal
 
 ## Kendala
 1. Lupa memasukkan script instalasi dan konfigurasi ke `script.sh`.
-2. Kesulitan dalam mengganti request gambar yang memiliki substring franky akan diarahkan menuju franky.png pada pengerjaan soal 17.
+2. Kesulitan dalam mengganti request gambar yang memiliki substring franky untuk diarahkan menuju franky.png pada soal no. 17.
 
 ## Pembagian Tugas
 |Nama                   |Soal   |
 |:---------------------:|:-----:|
 |nama|soal|
 |nama|soal|
-|Jagad Wijaya Purnomo|soal no. 7-17|
+|Jagad Wijaya Purnomo|7-17|
